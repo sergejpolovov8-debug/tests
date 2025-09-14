@@ -1,0 +1,1410 @@
+/* стиль кнопок для выбора кол-во камней*/
+.kolv_num1 {
+    position: absolute;
+    left: 1130px;
+    top: 254px;
+}
+
+.kolv_num2 {
+    position: absolute;
+    left: 1210px;
+    top: 254px;    
+}
+
+
+.kolv_num3 {
+    position: absolute;
+    left: 1290px;
+    top: 254px;    
+}
+
+
+.kolv_num4 {
+    position: absolute;
+    left: 1370px;
+    top: 254px;    
+}
+
+
+.kolv_num5 {
+    position: absolute;
+    left: 1450px;
+    top: 254px;    
+}
+
+
+.kolv_num6 {
+    position: absolute;
+    left: 1530px;
+    top: 254px;    
+}
+
+
+/* стиль 2 ряда кнопок для кол-во выбора камней*/
+.kolv_num7 {
+    position: absolute;
+    left: 1130px;
+    top: 334px;    
+}
+
+
+.kolv_num8 {
+    position: absolute;
+    left: 1210px;
+    top: 334px;    
+}
+
+
+.kolv_num9 {
+    position: absolute;
+    left: 1290px;
+    top: 334px;    
+}
+
+
+.kolv_num10 {
+    position: absolute;
+    left: 1370px;
+    top: 334px;    
+}
+
+
+.kolv_num11 {
+    position: absolute;
+    left: 1450px;
+    top: 334px;    
+}
+
+
+
+
+.prava {
+    color: #FFFFFF;
+    position: absolute;
+    left: 775px;
+    top: 1000px;
+}
+
+
+
+
+
+/* ряд 1 */
+.num_1 {
+    position: absolute;
+    left: 723px; 
+    top: 820px;
+}
+
+.num_2 {
+    position: absolute;
+    left: 785px; 
+    top: 820px;   
+}
+
+.num_3 {
+    position: absolute;
+    left: 661px; 
+    top: 820px;   
+}
+
+.num_4 {
+    position: absolute;
+    left: 599px; 
+    top: 820px;   
+}
+
+.num_5 {
+    position: absolute;
+    left: 537px; 
+    top: 820px;   
+}
+
+.num_6 {
+    position: absolute;
+    left: 475px; 
+    top: 820px;   
+}
+
+.num_7 {
+    position: absolute;
+    left: 413px; 
+    top: 820px;   
+}
+
+.num_8 {
+    position: absolute;
+    left: 351px; 
+    top: 820px;   
+}
+
+.num_9 {
+    position: absolute;
+    left: 289px;
+    top: 820px;   
+}
+
+.num_10 {
+    position: absolute;
+    left: 227px; 
+    top: 820px;   
+}
+
+.num_11 {
+    position: absolute;
+    left: 165px; 
+    top: 820px;   
+}
+
+.num_12 {
+    position: absolute;
+    left: 103px; 
+    top: 820px;
+}
+
+
+
+
+
+/* ряд 2 */
+.num_13 {
+    position: absolute;
+    left: 723px;
+    top: 785px; 
+}
+
+.num_14 {
+    position: absolute;
+    left: 785px;
+    top: 785px; 
+}
+
+.num_15 {
+    position: absolute;
+    left: 661px;
+    top: 785px; 
+}
+
+.num_16 {
+    position: absolute;
+    left: 599px;
+    top: 785px; 
+}
+
+.num_17 {
+    position: absolute;
+    left: 537px;
+    top: 785px; 
+}
+
+.num_18 {
+    position: absolute;
+    left: 475px;
+    top: 785px; 
+}
+
+.num_19 {
+    position: absolute;
+    left: 413px;
+    top: 785px; 
+}
+
+.num_20 {
+    position: absolute;
+    left: 351px;
+    top: 785px; 
+}
+
+.num_21 {
+    position: absolute;
+    left: 289px;
+    top: 785px; 
+}
+
+.num_22 {
+    position: absolute;
+    left: 227px;
+    top: 785px; 
+}
+
+.num_23 {
+    position: absolute;
+    left: 165px;
+    top: 785px; 
+}
+
+.num_24 {
+    position: absolute;
+    left: 103px;
+    top: 785px; 
+}
+
+
+
+
+
+
+
+
+
+/* ряд 3 */
+.num_25 {
+    position: absolute;
+    left: 723px;
+    top: 750px;
+}
+
+.num_26 {
+    position: absolute;
+    left: 785px;
+    top: 750px;
+}
+
+.num_27 {
+    position: absolute;
+    left: 661px;
+    top: 750px;
+}
+
+.num_28 {
+    position: absolute;
+    left: 599px;
+    top: 750px;
+}
+
+.num_29 {
+    position: absolute;
+    left: 537px;
+    top: 750px;
+}
+
+.num_30 {
+    position: absolute;
+    left: 475px;
+    top: 750px;
+}
+
+.num_31 {
+    position: absolute;
+    left: 413px;
+    top: 750px;
+}
+
+.num_32 {
+    position: absolute;
+    left: 351px;
+    top: 750px;
+}
+
+.num_33 {
+    position: absolute;
+    left: 289px;
+    top: 750px;
+}
+
+.num_34 {
+    position: absolute;
+    left: 227px;
+    top: 750px;
+}
+
+.num_35 {
+    position: absolute;
+    left: 165px;
+    top: 750px;
+}
+
+.num_36 {
+    position: absolute;
+    left: 103px;
+    top: 750px;
+}
+
+
+
+
+
+
+
+
+
+/* ряд 4 */
+.num_37 {
+    position: absolute;
+    left: 723px;
+    top: 715px; 
+}
+
+.num_38 {
+    position: absolute;
+    left: 785px;
+    top: 715px; 
+}
+
+.num_39 {
+    position: absolute;
+    left: 661px;
+    top: 715px; 
+}
+
+.num_40 {
+    position: absolute;
+    left: 599px;
+    top: 715px; 
+}
+
+.num_41 {
+    position: absolute;
+    left: 537px;
+    top: 715px; 
+}
+
+.num_42 {
+    position: absolute;
+    left: 475px;
+    top: 715px; 
+}
+
+.num_43 {
+    position: absolute;
+    left: 413px;
+    top: 715px; 
+}
+
+.num_44 {
+    position: absolute;
+    left: 351px;
+    top: 715px; 
+}
+
+.num_45 {
+    position: absolute;
+    left: 289px;
+    top: 715px; 
+}
+
+.num_46 {
+    position: absolute;
+    left: 227px;
+    top: 715px; 
+}
+
+.num_47 {
+    position: absolute;
+    left: 165px;
+    top: 715px; 
+}
+
+.num_48 {
+    position: absolute;
+    left: 103px;
+    top: 715px; 
+}
+
+
+
+
+
+
+/* ряд 5 */
+.num_49 {
+    position: absolute;
+    left: 723px;
+    top: 680px; 
+}
+
+.num_50 {
+    position: absolute;
+    left: 785px;
+    top: 680px; 
+}
+
+.num_51 {
+    position: absolute;
+    left: 661px;
+    top: 680px; 
+}
+
+.num_52 {
+    position: absolute;
+    left: 599px;
+    top: 680px; 
+}
+
+.num_53 {
+    position: absolute;
+    left: 537px;
+    top: 680px; 
+}
+
+.num_54 {
+    position: absolute;
+    left: 475px;
+    top: 680px; 
+}
+
+.num_55 {
+    position: absolute;
+    left: 413px;
+    top: 680px; 
+}
+
+.num_56 {
+    position: absolute;
+    left: 351px;
+    top: 680px; 
+}
+
+.num_57 {
+    position: absolute;
+    left: 289px;
+    top: 680px; 
+}
+
+.num_58 {
+    position: absolute;
+    left: 227px;
+    top: 680px; 
+}
+
+.num_59 {
+    position: absolute;
+    left: 165px;
+    top: 680px; 
+}
+
+.num_60 {
+    position: absolute;
+    left: 103px;
+    top: 680px; 
+}
+
+
+
+
+
+
+
+/* ряд 6 */
+.num_61 {
+    position: absolute;
+    left: 723px;
+    top: 645px; 
+}
+
+.num_62 {
+    position: absolute;
+    left: 785px;
+    top: 645px; 
+}
+
+.num_63 {
+    position: absolute;
+    left: 661px;
+    top: 645px; 
+}
+
+.num_64 {
+    position: absolute;
+    left: 599px;
+    top: 645px; 
+}
+
+.num_65 {
+    position: absolute;
+    left: 537px;
+    top: 645px; 
+}
+
+.num_66 {
+    position: absolute;
+    left: 475px;
+    top: 645px; 
+}
+
+.num_67 {
+    position: absolute;
+    left: 413px;
+    top: 645px; 
+}
+
+.num_68 {
+    position: absolute;
+    left: 351px;
+    top: 645px; 
+}
+
+.num_69 {
+    position: absolute;
+    left: 289px;
+    top: 645px; 
+}
+
+.num_70 {
+    position: absolute;
+    left: 227px;
+    top: 645px; 
+}
+
+.num_71 {
+    position: absolute;
+    left: 165px;
+    top: 645px; 
+}
+
+.num_72 {
+    position: absolute;
+    left: 103px;
+    top: 645px; 
+}
+
+
+
+
+
+
+/* ряд 7 */
+.num_73 {
+    position: absolute;
+    left: 723px;
+    top: 610px; 
+}
+
+.num_74 {
+    position: absolute;
+    left: 785px;
+    top: 610px; 
+}
+
+.num_75 {
+    position: absolute;
+    left: 661px;
+    top: 610px; 
+}
+
+.num_76 {
+    position: absolute;
+    left: 599px;
+    top: 610px; 
+}
+
+.num_77 {
+    position: absolute;
+    left: 537px;
+    top: 610px; 
+}
+
+.num_78 {
+    position: absolute;
+    left: 475px;
+    top: 610px; 
+}
+
+.num_79 {
+    position: absolute;
+    left: 413px;
+    top: 610px; 
+}
+
+.num_80 {
+    position: absolute;
+    left: 351px;
+    top: 610px; 
+}
+
+.num_81 {
+    position: absolute;
+    left: 289px;
+    top: 610px; 
+}
+
+.num_82 {
+    position: absolute;
+    left: 227px;
+    top: 610px; 
+}
+
+.num_83 {
+    position: absolute;
+    left: 165px;
+    top: 610px; 
+}
+
+.num_84 {
+    position: absolute;
+    left: 103px;
+    top: 610px; 
+}
+
+
+
+
+/* ряд 8 */
+.num_85 {
+    position: absolute;
+    left: 723px;
+    top: 575px; 
+}
+
+.num_86 {
+    position: absolute;
+    left: 785px;
+    top: 575px; 
+}
+
+.num_87 {
+    position: absolute;
+    left: 661px;
+    top: 575px; 
+}
+
+.num_88 {
+    position: absolute;
+    left: 599px;
+    top: 575px; 
+}
+
+.num_89 {
+    position: absolute;
+    left: 537px;
+    top: 575px; 
+}
+
+.num_90 {
+    position: absolute;
+    left: 475px;
+    top: 575px; 
+}
+
+.num_91 {
+    position: absolute;
+    left: 413px;
+    top: 575px; 
+}
+
+.num_92 {
+    position: absolute;
+    left: 351px;
+    top: 575px; 
+}
+
+.num_93 {
+    position: absolute;
+    left: 289px;
+    top: 575px; 
+}
+
+.num_94 {
+    position: absolute;
+    left: 227px;
+    top: 575px; 
+}
+
+.num_95 {
+    position: absolute;
+    left: 165px;
+    top: 575px; 
+}
+
+.num_96 {
+    position: absolute;
+    left: 103px;
+    top: 575px; 
+}
+
+
+
+
+/* ряд 9 */
+.num_97 {
+    position: absolute;
+    left: 723px;
+    top: 540px; 
+}
+
+.num_98 {
+    position: absolute;
+    left: 785px;
+    top: 540px; 
+}
+
+.num_99 {
+    position: absolute;
+    left: 661px;
+    top: 540px; 
+}
+
+.num_100 {
+    position: absolute;
+    left: 599px;
+    top: 540px; 
+}
+
+.num_101 {
+    position: absolute;
+    left: 537px;
+    top: 540px; 
+}
+
+.num_102 {
+    position: absolute;
+    left: 475px;
+    top: 540px; 
+}
+
+.num_103 {
+    position: absolute;
+    left: 413px;
+    top: 540px; 
+}
+
+.num_104 {
+    position: absolute;
+    left: 351px;
+    top: 540px; 
+}
+
+.num_105 {
+    position: absolute;
+    left: 289px;
+    top: 540px; 
+}
+
+.num_106 {
+    position: absolute;
+    left: 227px;
+    top: 540px; 
+}
+
+.num_107 {
+    position: absolute;
+    left: 165px;
+    top: 540px; 
+}
+
+.num_108 {
+    position: absolute;
+    left: 103px;
+    top: 540px; 
+}
+
+
+
+
+/* ряд 10 */
+.num_109 {
+    position: absolute;
+    left: 723px;
+    top: 505px; 
+}
+
+.num_110 {
+    position: absolute;
+    left: 785px;
+    top: 505px; 
+}
+
+.num_111 {
+    position: absolute;
+    left: 661px;
+    top: 505px; 
+}
+
+.num_112 {
+    position: absolute;
+    left: 599px;
+    top: 505px; 
+}
+
+.num_113 {
+    position: absolute;
+    left: 537px;
+    top: 505px; 
+}
+
+.num_114 {
+    position: absolute;
+    left: 475px;
+    top: 505px; 
+}
+
+.num_115 {
+    position: absolute;
+    left: 413px;
+    top: 505px; 
+}
+
+.num_116 {
+    position: absolute;
+    left: 351px;
+    top: 505px; 
+}
+
+.num_117 {
+    position: absolute;
+    left: 289px;
+    top: 505px; 
+}
+
+.num_118 {
+    position: absolute;
+    left: 227px;
+    top: 505px; 
+}
+
+.num_119 {
+    position: absolute;
+    left: 165px;
+    top: 505px; 
+}
+
+.num_120 {
+    position: absolute;
+    left: 103px;
+    top: 505px; 
+}
+
+
+
+
+
+
+/* ряд 11 */
+.num_121 {
+    position: absolute;
+    left: 723px;
+    top: 470px; 
+}
+
+.num_122 {
+    position: absolute;
+    left: 785px;
+    top: 470px; 
+}
+
+.num_123 {
+    position: absolute;
+    left: 661px;
+    top: 470px; 
+}
+
+.num_124 {
+    position: absolute;
+    left: 599px;
+    top: 470px; 
+}
+
+.num_125 {
+    position: absolute;
+    left: 537px;
+    top: 470px; 
+}
+
+.num_126 {
+    position: absolute;
+    left: 475px;
+    top: 470px; 
+}
+
+.num_127 {
+    position: absolute;
+    left: 413px;
+    top: 470px; 
+}
+
+.num_128 {
+    position: absolute;
+    left: 351px;
+    top: 470px; 
+}
+
+.num_129 {
+    position: absolute;
+    left: 289px;
+    top: 470px; 
+}
+
+.num_130 {
+    position: absolute;
+    left: 227px;
+    top: 470px; 
+}
+
+.num_131 {
+    position: absolute;
+    left: 165px;
+    top: 470px; 
+}
+
+.num_132 {
+    position: absolute;
+    left: 103px;
+    top: 470px; 
+}
+
+
+
+
+
+
+/* ряд 12 */
+.num_133 {
+    position: absolute;
+    left: 723px;
+    top: 435px; 
+}
+
+.num_134 {
+    position: absolute;
+    left: 785px;
+    top: 435px; 
+}
+
+.num_135 {
+    position: absolute;
+    left: 661px;
+    top: 435px; 
+}
+
+.num_136 {
+    position: absolute;
+    left: 599px;
+    top: 435px; 
+}
+
+.num_137 {
+    position: absolute;
+    left: 537px;
+    top: 435px; 
+}
+
+.num_138 {
+    position: absolute;
+    left: 475px;
+    top: 435px; 
+}
+
+.num_139 {
+    position: absolute;
+    left: 413px;
+    top: 435px; 
+}
+
+.num_140 {
+    position: absolute;
+    left: 351px;
+    top: 435px; 
+}
+
+.num_141 {
+    position: absolute;
+    left: 289px;
+    top: 435px; 
+}
+
+.num_142 {
+    position: absolute;
+    left: 227px;
+    top: 435px; 
+}
+
+.num_143 {
+    position: absolute;
+    left: 165px;
+    top: 435px; 
+}
+
+.num_144 {
+    position: absolute;
+    left: 103px;
+    top: 435px; 
+}
+
+
+
+
+
+
+
+
+
+/* ряд 13 */
+.num_145 {
+    position: absolute;
+    left: 723px;
+    top: 400px; 
+}
+
+.num_146 {
+    position: absolute;
+    left: 785px;
+    top: 400px; 
+}
+
+.num_147 {
+    position: absolute;
+    left: 661px;
+    top: 400px; 
+}
+
+.num_148 {
+    position: absolute;
+    left: 599px;
+    top: 400px; 
+}
+
+.num_149 {
+    position: absolute;
+    left: 537px;
+    top: 400px; 
+}
+
+.num_150 {
+    position: absolute;
+    left: 475px;
+    top: 400px; 
+}
+
+.num_151 {
+    position: absolute;
+    left: 413px;
+    top: 400px; 
+}
+
+.num_152 {
+    position: absolute;
+    left: 351px;
+    top: 400px; 
+}
+
+.num_153 {
+    position: absolute;
+    left: 289px;
+    top: 400px; 
+}
+
+.num_154 {
+    position: absolute;
+    left: 227px;
+    top: 400px; 
+}
+
+.num_155 {
+    position: absolute;
+    left: 165px;
+    top: 400px; 
+}
+
+.num_156 {
+    position: absolute;
+    left: 103px;
+    top: 400px; 
+}
+
+
+
+
+
+/* ряд 14 */
+.num_157 {
+    position: absolute;
+    left: 723px;
+    top: 365px; 
+}
+
+.num_158 {
+    position: absolute;
+    left: 785px;
+    top: 365px; 
+}
+
+.num_159 {
+    position: absolute;
+    left: 661px;
+    top: 365px; 
+}
+
+.num_160 {
+    position: absolute;
+    left: 599px;
+    top: 365px; 
+}
+
+.num_161 {
+    position: absolute;
+    left: 537px;
+    top: 365px; 
+}
+
+.num_162 {
+    position: absolute;
+    left: 475px;
+    top: 365px; 
+}
+
+.num_163 {
+    position: absolute;
+    left: 413px;
+    top: 365px; 
+}
+
+.num_164 {
+    position: absolute;
+    left: 351px;
+    top: 365px; 
+}
+
+.num_165 {
+    position: absolute;
+    left: 289px;
+    top: 365px; 
+}
+
+.num_166 {
+    position: absolute;
+    left: 227px;
+    top: 365px; 
+}
+
+.num_167 {
+    position: absolute;
+    left: 165px;
+    top: 365px; 
+}
+
+.num_168 {
+    position: absolute;
+    left: 103px;
+    top: 365px; 
+}
+
+
+
+
+/* ряд 15 */
+.num_169 {
+    position: absolute;
+    left: 723px;
+    top: 330px; 
+}
+
+.num_170 {
+    position: absolute;
+    left: 785px;
+    top: 330px; 
+}
+
+.num_171 {
+    position: absolute;
+    left: 661px;
+    top: 330px; 
+}
+
+.num_172 {
+    position: absolute;
+    left: 599px;
+    top: 330px; 
+}
+
+.num_173 {
+    position: absolute;
+    left: 537px;
+    top: 330px; 
+}
+
+.num_174 {
+    position: absolute;
+    left: 475px;
+    top: 330px; 
+}
+
+.num_175 {
+    position: absolute;
+    left: 413px;
+    top: 330px; 
+}
+
+.num_176 {
+    position: absolute;
+    left: 351px;
+    top: 330px; 
+}
+
+.num_177 {
+    position: absolute;
+    left: 289px;
+    top: 330px; 
+}
+
+.num_178 {
+    position: absolute;
+    left: 227px;
+    top: 330px; 
+}
+
+.num_179 {
+    position: absolute;
+    left: 165px;
+    top: 330px; 
+}
+
+.num_180 {
+    position: absolute;
+    left: 103px;
+    top: 330px; 
+}
+
+
+
+
+
+/* ряд 16 */
+.num_181 {
+    position: absolute;
+    left: 723px;
+    top: 295px; 
+}
+
+.num_182 {
+    position: absolute;
+    left: 785px;
+    top: 295px; 
+}
+
+.num_183 {
+    position: absolute;
+    left: 661px;
+    top: 295px; 
+}
+
+.num_184 {
+    position: absolute;
+    left: 599px;
+    top: 295px; 
+}
+
+.num_185 {
+    position: absolute;
+    left: 537px;
+    top: 295px; 
+}
+
+.num_186 {
+    position: absolute;
+    left: 475px;
+    top: 295px; 
+}
+
+.num_187 {
+    position: absolute;
+    left: 413px;
+    top: 295px; 
+}
+
+.num_188 {
+    position: absolute;
+    left: 351px;
+    top: 295px; 
+}
+
+.num_189 {
+    position: absolute;
+    left: 289px;
+    top: 295px; 
+}
+
+.num_190 {
+    position: absolute;
+    left: 227px;
+    top: 295px; 
+}
+
+.num_191 {
+    position: absolute;
+    left: 165px;
+    top: 295px; 
+}
+
+.num_192 {
+    position: absolute;
+    left: 103px;
+    top: 295px; 
+}
+
+
+
+
+
+
+/* ряд 17 */
+.num_193 {
+    position: absolute;
+    left: 723px;
+    top: 260px; 
+}
+
+.num_194 {
+    position: absolute;
+    left: 785px;
+    top: 260px; 
+}
+
+.num_195 {
+    position: absolute;
+    left: 661px;
+    top: 260px; 
+}
+
+.num_196 {
+    position: absolute;
+    left: 599px;
+    top: 260px; 
+}
+
+.num_197 {
+    position: absolute;
+    left: 537px;
+    top: 260px; 
+}
+
+.num_198 {
+    position: absolute;
+    left: 475px;
+    top: 260px; 
+}
+
+.num_199 {
+    position: absolute;
+    left: 413px;
+    top: 260px; 
+}
+
+.num_200 {
+    position: absolute;
+    left: 351px;
+    top: 260px; 
+}
+
+.num_201 {
+    position: absolute;
+    left: 289px;
+    top: 260px; 
+}
+
+.num_202 {
+    position: absolute;
+    left: 227px;
+    top: 260px; 
+}
+
+.num_203 {
+    position: absolute;
+    left: 165px;
+    top: 260px; 
+}
+
+.num_204 {
+    position: absolute;
+    left: 103px;
+    top: 260px; 
+}
