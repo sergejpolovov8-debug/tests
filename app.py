@@ -18,25 +18,42 @@ def load_index():
     print("📥 Загружаю базу с Dropbox...")
     start_time = time.time()
     
-    # ИСПРАВЛЕННАЯ ССЫЛКА - dl=1 вместо dl=0
     dropbox_url = "https://www.dropbox.com/scl/fi/kxj0wuh6z3yqplb8qc42n/phone_index.json.gz?rlkey=y5gsvr81wel9vty1jodaqtc1b&st=y1zwvbme&dl=1"
     
     try:
-        response = requests.get(dropbox_url, timeout=60)
+        # Потоковая загрузка для экономии памяти
+        response = requests.get(dropbox_url, stream=True, timeout=120)
         response.raise_for_status()
         
-        print(f"📦 Размер файла: {len(response.content) / (1024*1024):.1f} MB")
+        # Собираем данные частями
+        chunks = []
+        total_size = 0
         
-        # Распаковываем
-        compressed_data = io.BytesIO(response.content)
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:
+                chunks.append(chunk)
+                total_size += len(chunk)
+                if total_size > 300 * 1024 * 1024:  # 300MB лимит
+                    print("❌ Файл слишком большой для Free тарифа")
+                    return
+        
+        print(f"📦 Загружено: {total_size / (1024*1024):.1f} MB")
+        
+        # Объединяем чанки и распаковываем
+        file_data = b''.join(chunks)
+        compressed_data = io.BytesIO(file_data)
+        
         with gzip.open(compressed_data, 'rt', encoding='utf-8') as file:
             PHONE_INDEX = json.load(file)
         
+        # Очищаем память
+        del chunks, file_data, compressed_data
+        
         LOAD_TIME = time.time() - start_time
-        print(f"✅ База загружена за {LOAD_TIME:.1f} сек! Записей: {len(PHONE_INDEX):,}")
+        print(f"✅ База загружена! Записей: {len(PHONE_INDEX):,}")
         
     except Exception as error:
-        print(f"❌ Ошибка загрузки: {error}")
+        print(f"❌ Ошибка: {error}")
         PHONE_INDEX = {}
 
 def clean_phone(phone_str):
@@ -53,6 +70,9 @@ def home():
 
 @app.route('/search', methods=['POST'])
 def search_phone():
+    if not PHONE_INDEX:
+        return jsonify({"error": "База не загружена"}), 503
+        
     if not request.json:
         return jsonify({"error": "Требуется JSON"}), 400
     
@@ -65,9 +85,6 @@ def search_phone():
     
     if token_input != API_TOKEN:
         return jsonify({"error": "Неверный токен"}), 401
-    
-    if not PHONE_INDEX:
-        return jsonify({"error": "База не загружена"}), 503
     
     clean_number = clean_phone(phone_input)
     
@@ -94,7 +111,7 @@ def status():
         "records": len(PHONE_INDEX) if PHONE_INDEX else 0
     })
 
-# Загружаем базу
+# Загружаем базу при старте
 load_index()
 
 if __name__ == '__main__':
