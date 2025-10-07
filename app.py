@@ -9,11 +9,11 @@ import time
 app = Flask(__name__)
 
 API_TOKEN = "YXNwZWN0"
-GZIP_CONTENT = None
+PHONE_INDEX = None
 LOAD_TIME = None
 
-def load_gzip_index():
-    global GZIP_CONTENT, LOAD_TIME
+def load_index():
+    global PHONE_INDEX, LOAD_TIME
     
     print("📥 Загружаю базу с Dropbox...")
     start_time = time.time()
@@ -26,66 +26,17 @@ def load_gzip_index():
         
         print(f"📦 Размер файла: {len(response.content) / (1024*1024):.1f} MB")
         
-        # Сохраняем сжатые данные в памяти
-        GZIP_CONTENT = response.content
+        # РАСПАКОВЫВАЕМ ВСЮ БАЗУ В ПАМЯТЬ
+        compressed_data = io.BytesIO(response.content)
+        with gzip.open(compressed_data, 'rt', encoding='utf-8') as file:
+            PHONE_INDEX = json.load(file)
+        
         LOAD_TIME = time.time() - start_time
-        print(f"✅ База загружена за {LOAD_TIME:.1f} сек!")
+        print(f"✅ База загружена за {LOAD_TIME:.1f} сек! Записей: {len(PHONE_INDEX):,}")
         
     except Exception as error:
         print(f"❌ Ошибка загрузки: {error}")
-        GZIP_CONTENT = None
-
-def search_in_gzip(phone_number):
-    """
-    Ищет телефон в gzip архиве без полной распаковки
-    """
-    if not GZIP_CONTENT:
-        return None
-    
-    try:
-        # Декомпрессия на лету
-        compressed_data = io.BytesIO(GZIP_CONTENT)
-        
-        # Читаем файл построчно для экономии памяти
-        with gzip.open(compressed_data, 'rt', encoding='utf-8') as file:
-            buffer = ""
-            for line in file:
-                buffer += line
-                
-                # Ищем телефон в текущем буфере
-                phone_pattern = f'"{phone_number}"'
-                if phone_pattern in buffer:
-                    # Нашли телефон, извлекаем полную запись
-                    start_idx = buffer.find(phone_pattern)
-                    
-                    # Ищем начало объекта
-                    obj_start = buffer.rfind('{', 0, start_idx)
-                    if obj_start == -1:
-                        continue
-                    
-                    # Ищем конец объекта
-                    obj_end = buffer.find('}', start_idx)
-                    if obj_end == -1:
-                        # Объект продолжается в следующей строке
-                        continue
-                    
-                    obj_end += 1  # Включаем закрывающую скобку
-                    
-                    try:
-                        # Извлекаем и парсим JSON объект
-                        record_str = buffer[obj_start:obj_end]
-                        record_data = json.loads(record_str)
-                        
-                        if phone_number in record_data:
-                            return record_data[phone_number]
-                    except json.JSONDecodeError:
-                        continue
-                    
-        return None
-        
-    except Exception as e:
-        print(f"❌ Ошибка поиска в архиве: {e}")
-        return None
+        PHONE_INDEX = {}
 
 def clean_phone(phone_str):
     digits = ''.join(filter(str.isdigit, phone_str))
@@ -97,7 +48,7 @@ def clean_phone(phone_str):
 
 @app.route('/')
 def home():
-    return "detail not found", 404
+    return "Phone Search API"
 
 @app.route('/search', methods=['POST'])
 def search_phone():
@@ -114,7 +65,7 @@ def search_phone():
     if token_input != API_TOKEN:
         return jsonify({"error": "Неверный токен"}), 401
     
-    if not GZIP_CONTENT:
+    if not PHONE_INDEX:
         return jsonify({"error": "База не загружена"}), 503
     
     clean_number = clean_phone(phone_input)
@@ -122,32 +73,34 @@ def search_phone():
     if len(clean_number) != 11:
         return jsonify({"error": "Неверный формат номера"}), 400
     
+    # БЫСТРЫЙ ПОИСК В ПАМЯТИ
     start_time = time.time()
-    record = search_in_gzip(clean_number)
+    record = PHONE_INDEX.get(clean_number)
     search_time = time.time() - start_time
     
     if record:
         return jsonify({
-            "📱 Телефон": clean_number,
-            "👤 ФИО": record.get('n', ''),
-            "📧 Email": record.get('e', ''),
-            "⚡ Время поиска": f"{search_time:.3f} сек"
+            "phone": clean_number,
+            "name": record.get('n', ''),
+            "email": record.get('e', ''),
+            "search_time_ms": round(search_time * 1000, 3)
         })
     else:
         return jsonify({
-            "📱 Телефон": clean_number,
-            "💬 Статус": "Не найден",
-            "⚡ Время поиска": f"{search_time:.3f} сек"
+            "phone": clean_number,
+            "status": "not_found",
+            "search_time_ms": round(search_time * 1000, 3)
         })
 
 @app.route('/status')
 def status():
     return jsonify({
-        "status": "online" if GZIP_CONTENT else "loading",
-        "memory_usage": f"{len(GZIP_CONTENT) / (1024*1024):.1f} MB" if GZIP_CONTENT else "0 MB"
+        "status": "online" if PHONE_INDEX else "loading",
+        "records": len(PHONE_INDEX) if PHONE_INDEX else 0,
+        "load_time_sec": round(LOAD_TIME, 2) if LOAD_TIME else 0
     })
 
-# Загружаем базу
-load_gzip_index()
+# Загружаем базу при старте
+load_index()
 
-
+# Убери блок if __name__ если используешь gunicorn
